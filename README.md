@@ -1,2 +1,1 @@
-# SPA-react
-simple project  with reactjs
+# Note App with react
