@@ -2,9 +2,9 @@ import React from 'react'
 
 const ArchivePage = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>ini archivepage</h1>
+    </>
   )
 }
 
