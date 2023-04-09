@@ -8,14 +8,18 @@ export default class HomePage extends Component {
     super(props)
 
     this.state = {
-      notes: getAllNotes
+      notes: getAllNotes()
     }
   }
 
   render() {
     return (
       <div>
-        {this.state.notes.map((note) => (console.log(note.id)))}
+        {
+          this.state.notes.map(note => {
+            return (console.log(note.title))
+          })
+        }
       </div>
     )
   }
