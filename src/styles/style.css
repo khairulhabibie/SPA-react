@@ -21,7 +21,7 @@ header {
 }
 
 hr {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -37,28 +37,29 @@ hr {
 
 main {
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 20px auto;
 }
 
-section {
+/* section {
   max-width: 1000px;
-}
+} */
 
 section .note-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   text-overflow: ellipsis;
 }
 
 section .note-list .note-item {
   border: solid 1px white;
-  padding: 5px;
-  width: 215px;
-  aspect-ratio: 1 / 1;
-  min-width: 215px;
+  box-shadow: 0px -3px 1px white;
+  padding: 10px;
+  width: 270px;
+  aspect-ratio: 1 / 0.75;
+  /* min-width: 270px; */
   overflow: hidden;
   border-radius: 10px;
 }
