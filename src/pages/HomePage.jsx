@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { getAllNotes } from '../utils/local-data'
-
-
+import NoteList from '../components/NoteList'
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -14,13 +13,9 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <div>
-        {
-          this.state.notes.map(note => {
-            return (console.log(note.title))
-          })
-        }
-      </div>
+      <section>
+        <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+      </section>
     )
   }
 }

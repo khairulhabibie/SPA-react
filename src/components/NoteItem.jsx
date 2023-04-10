@@ -1,15 +1,11 @@
 import React from 'react'
 
-
-const NoteItem = ({ id, title, body, createdAt, archived }) => {
+const NoteItem = ({ title, body, createdAt }) => {
   return (
-    <div className='contact-Item'>
-      <h3>{title}</h3>
-      <p>{id}</p>
-      {/* <p>{body}</p> */}
-      <p>{createdAt}</p>
-      <p>{archived}</p>
-
+    <div className='note-item'>
+      <h4>{title}</h4>
+      <p className='date'>{createdAt}</p>
+      <p className='text-body'>{body}</p>
     </div>
   )
 }

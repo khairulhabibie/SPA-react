@@ -40,3 +40,31 @@ main {
   max-width: 1000px;
   margin: 20px auto;
 }
+
+section {
+  max-width: 1000px;
+}
+
+section .note-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-overflow: ellipsis;
+}
+
+section .note-list .note-item {
+  border: solid 1px white;
+  padding: 5px;
+  width: 215px;
+  aspect-ratio: 1 / 1;
+  min-width: 215px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+p.date {
+  margin-bottom: 10px;
+  font-size: 0.7em;
+  opacity: 0.8;
+}
