@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { deleteNote, getNote } from '../utils/local-data'
+import { deleteNote, getNote, archiveNote, unarchiveNote, } from '../utils/local-data'
 import NoteDetail from '../components/NoteDetail';
 
 const DetailPageWapper = () => {
@@ -12,9 +12,12 @@ const DetailPageWapper = () => {
         navigate('/')
     }
 
-    return <DetailPage id={id} onDelete={onDeleteNoteHandler} />
-}
+    function onActiveNoteHandler() {
+        navigate('/')
+    }
 
+    return <DetailPage id={id} onDelete={onDeleteNoteHandler} onActiveNote={onActiveNoteHandler} />
+}
 
 class DetailPage extends Component {
     constructor(props) {
@@ -25,6 +28,10 @@ class DetailPage extends Component {
         }
     }
 
+    onToggleArchiveHandler = (id) => {
+        this.state.note.archived ? unarchiveNote(id) : archiveNote(id);
+        this.props.onActiveNote()
+    }
 
 
     render() {
@@ -32,7 +39,7 @@ class DetailPage extends Component {
             return <p>Note detail is note Found</p>
         }
         return (
-            <NoteDetail {...this.state.note} onDelete={this.props.onDelete} />
+            <NoteDetail {...this.state.note} onDelete={this.props.onDelete} onToggleArchive={this.onToggleArchiveHandler} />
         )
     }
 }

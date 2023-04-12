@@ -131,9 +131,12 @@ textarea {
 .pop-button {
   position: fixed;
   bottom: 20px;
-  right: 70px;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-grow: 1;
+  margin: 0 auto;
 }
-
 
 /* more css button */
 button {
