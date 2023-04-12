@@ -25,6 +25,18 @@ hr {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 2.5em;
+}
+
+p.date {
+  margin: 5px 0 35px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
 .Navigation ul li {
   display: inline-block;
   margin-inline: 10px;
@@ -52,7 +64,6 @@ section {
   flex-wrap: wrap;
   gap: 15px;
   text-overflow: ellipsis;
-
 }
 
 .note-item {
@@ -83,6 +94,9 @@ section {
   left: 0;
   height: 20px;
   width: 50%;
+
+  background-color: red;
+  color: white;
 }
 
 .btn-archive,
@@ -94,12 +108,105 @@ section {
   width: 50%;
 }
 
+.btn-archive {
+  background-color: darkgreen;
+  color: white;
+}
+
+.btn-active {
+  background-color: darkblue;
+  color: white;
+}
+
 form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-input,
 textarea {
   padding: 20px 10px;
+}
+
+.pop-button {
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
+}
+
+
+/* more css button */
+button {
+  height: 3em;
+  width: 8em;
+  border: none;
+  border-radius: 10em;
+  background: #016DD9;
+  font-size: 17px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+button:hover {
+  cursor: pointer;
+  animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+/* more css input */
+.input {
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
+
+button[type='submit'] {
+  background-color: green;
+  position: absolute;
+  right: 0;
+  bottom: -70px;
 }

@@ -17,7 +17,6 @@ export default class ArchivePage extends Component {
       return {
         notes: getArchivedNotes()
       }
-
     })
   }
 
@@ -34,7 +33,7 @@ export default class ArchivePage extends Component {
   render() {
     return (
       <section>
-        <NoteList notes={this.state.notes} onDelete={this.onDeletNoteeHandler} onToggleArchive={this.onToggleArchiveNoteHandler} />
+        <NoteList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleArchiveNoteHandler} />
       </section>
     )
   }
