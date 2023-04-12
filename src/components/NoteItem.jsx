@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import DeleteButton from './DeleteButton'
 import ArhiveButton from './ArchiveButton'
 
-const NoteItem = ({ title, body, createdAt, id, onDelete, onArchive, onActive }) => {
+const NoteItem = ({ title, body, createdAt, id, onDelete, onToggleArchive }) => {
   return (
     <div className='note-item'>
       <div className='note-item-title'>
@@ -16,7 +16,7 @@ const NoteItem = ({ title, body, createdAt, id, onDelete, onArchive, onActive })
       <div className='note-item-body'><p>{body}</p></div>
       <div className='note-item-button'>
         <DeleteButton id={id} onDelete={onDelete} />
-        <ArhiveButton id={id} onArchive={onArchive} onActive={onActive} />
+        <ArhiveButton id={id} onToggleArchive={onToggleArchive} />
       </div>
     </div>
   )

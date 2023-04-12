@@ -1,12 +1,12 @@
 import React from 'react'
 
-const ArchiveButton = ({ id, onArchive, onActive }) => {
+const ArchiveButton = ({ id, onToggleArchive }) => {
     return (
         <>
             {
-                onActive === true ? <button className='btn-archive' onClick={() => onArchive(id)}>
+                onToggleArchive ? <button className='btn-archive' onClick={() => onToggleArchive(id)}>
                     Archive
-                </button> : <button className='btn-active' onClick={() => onActive(id)}>
+                </button> : <button className='btn-active' onClick={() => onToggleArchive(id)}>
                     Active
                 </button>
             }

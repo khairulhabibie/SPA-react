@@ -21,7 +21,7 @@ export default class HomePage extends Component {
     })
   }
 
-  onArchiveNoteHandler = (id) => {
+  onToggleArchiveNoteHandler = (id) => {
     archiveNote(id)
     this.setState(() => {
       return {
@@ -30,14 +30,10 @@ export default class HomePage extends Component {
     })
   }
 
-  onToggleActiveNoteHandler = (id) => {
-    console.log(id)
-  }
-
   render() {
     return (
       <section>
-        <NoteList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleActiveNoteHandler} />
+        <NoteList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleArchiveNoteHandler} />
       </section>
     )
   }

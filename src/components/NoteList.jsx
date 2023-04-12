@@ -2,7 +2,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import NoteItem from './NoteItem'
 
-const NoteList = ({ notes, onDelete, onArchive }) => {
+const NoteList = ({ notes, onDelete, onToggleArchive }) => {
   return (
     <div className="note-list">
       {
@@ -10,7 +10,7 @@ const NoteList = ({ notes, onDelete, onArchive }) => {
           <NoteItem
             key={note.id}
             id={note.id}
-            onDelete={onDelete} onArchive={onArchive} onActive={onActive}
+            onDelete={onDelete} onToggleArchive={onToggleArchive}
             {...note} />)
       }
     </div>
