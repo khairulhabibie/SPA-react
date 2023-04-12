@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const NoteItem = ({ title, body, createdAt, id }) => {
   return (
@@ -11,6 +12,14 @@ const NoteItem = ({ title, body, createdAt, id }) => {
       <p className='text-body'>{body}</p>
     </div>
   )
+}
+
+NoteItem.propType = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  archived: PropTypes.bool.isRequired
 }
 
 export default NoteItem

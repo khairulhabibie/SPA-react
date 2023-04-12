@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 export default class NoteInput extends Component {
   constructor(props) {
@@ -30,7 +30,8 @@ export default class NoteInput extends Component {
 
   onSubmitEventHandler = (event) => {
     event.preventDefault();
-    this.props.addNote(this.state)
+    this.props.addNote(this.state);
+    // event.target.reset();
   }
 
 
@@ -38,8 +39,7 @@ export default class NoteInput extends Component {
     return (
       <form onSubmit={this.onSubmitEventHandler}>
         <input type="text" placeholder='title' value={this.state.title} onChange={this.onTitleChangeHandler} />
-        <input type="textarea" placeholder='body' value={this.stat
-          .body} onChange={this.onBodyChangeHandler} />
+        <textarea placeholder='body' value={this.state.body} onChange={this.onBodyChangeHandler} cols={5} rows={4} />
         <button type='submit'>Add Note</button>
       </form>
     )
@@ -47,6 +47,6 @@ export default class NoteInput extends Component {
 }
 
 // check type
-NoteInput.propTypes = {
-  addNote: PropTypes.func.isRequired
-};
+// NoteInput.propTypes = {
+//   addNote: PropTypes.func.isRequired
+// };

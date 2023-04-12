@@ -6,7 +6,6 @@ import NoteDetail from '../components/NoteDetail';
 const DetailPage = () => {
     const { id } = useParams();
     const note = getNote(id)
-    // console.log(note)
 
     return (
         <>
@@ -14,7 +13,6 @@ const DetailPage = () => {
                 <p>Note detail is note Found</p> :
                 <NoteDetail {...note} />
             }
-
         </>
     )
 }
