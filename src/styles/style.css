@@ -41,11 +41,12 @@ main {
   margin: 20px auto;
 }
 
-/* section {
+section {
   max-width: 1000px;
-} */
+  margin: 0 auto;
+}
 
-section .note-list {
+.note-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -53,7 +54,7 @@ section .note-list {
   text-overflow: ellipsis;
 }
 
-section .note-list .note-item {
+.note-item {
   border: solid 1px white;
   box-shadow: 0px -3px 1px white;
   padding: 10px;

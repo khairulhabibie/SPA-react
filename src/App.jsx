@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
 import AddNote from './pages/AddNote';
 import ArchivePage from './pages/ArchivePage';
-import DetailPageWrapper from './pages/DetailPage';
+import DetailPage from './pages/DetailPage';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/note/new" element={<AddNote />} />
           <Route path="/archives" element={<ArchivePage />} />
-          <Route path="/note/:id" element={<DetailPageWrapper />} />
+          <Route path="/note/:id" element={<DetailPage />} />
         </Routes>
 
       </main>
