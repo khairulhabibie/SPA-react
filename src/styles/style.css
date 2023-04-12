@@ -52,6 +52,7 @@ section {
   flex-wrap: wrap;
   gap: 15px;
   text-overflow: ellipsis;
+
 }
 
 .note-item {
@@ -60,15 +61,37 @@ section {
   padding: 10px;
   width: 270px;
   aspect-ratio: 1 / 0.75;
-  /* min-width: 270px; */
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
+
 }
 
-p.date {
+.note-item-date {
   margin-bottom: 10px;
   font-size: 0.7em;
   opacity: 0.8;
+}
+
+.note-item-button {
+  display: flex;
+}
+
+.btn-delete {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 50%;
+}
+
+.btn-archive,
+.btn-active {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  width: 50%;
 }
 
 form {

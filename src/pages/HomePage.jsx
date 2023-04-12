@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getAllNotes } from '../utils/local-data'
+import { getActiveNotes, deleteNote, archiveNote } from '../utils/local-data'
 import NoteList from '../components/NoteList'
 
 export default class HomePage extends Component {
@@ -7,14 +7,37 @@ export default class HomePage extends Component {
     super(props)
 
     this.state = {
-      notes: getAllNotes()
+      notes: getActiveNotes()
     }
+  }
+
+  onDeleteNoteHandler = (id) => {
+    deleteNote(id);
+    this.setState(() => {
+      return {
+        notes: getActiveNotes()
+      }
+
+    })
+  }
+
+  onArchiveNoteHandler = (id) => {
+    archiveNote(id)
+    this.setState(() => {
+      return {
+        notes: getActiveNotes()
+      }
+    })
+  }
+
+  onToggleActiveNoteHandler = (id) => {
+    console.log(id)
   }
 
   render() {
     return (
       <section>
-        <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+        <NoteList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleActiveNoteHandler} />
       </section>
     )
   }

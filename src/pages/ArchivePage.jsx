@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getArchivedNotes } from '../utils/local-data'
+import { getArchivedNotes, deleteNote } from '../utils/local-data'
 import NoteList from '../components/NoteList'
 
 export default class ArchivePage extends Component {
@@ -11,11 +11,21 @@ export default class ArchivePage extends Component {
     }
   }
 
+  onDeleteNoteHandler = (id) => {
+    deleteNote(id);
+    this.setState(() => {
+      return {
+        notes: getArchivedNotes()
+      }
+
+    })
+  }
+
 
   render() {
     return (
       <section>
-        <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+        <NoteList notes={this.state.notes} onDelete={this.onDeletNoteeHandler} />
       </section>
     )
   }
