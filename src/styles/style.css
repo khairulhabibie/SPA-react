@@ -124,6 +124,21 @@ form {
   position: relative;
 }
 
+.input {
+  background-color: black;
+  color: whitesmoke;
+  padding: 10px 0px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+}
+
+form button {
+  width: 100%;
+}
+
 textarea {
   padding: 20px 10px;
 }
@@ -186,30 +201,4 @@ button:hover {
     -webkit-transform: translate(0);
     transform: translate(0);
   }
-}
-
-/* more css input */
-.input {
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  border-radius: 15px;
-  padding: 1em;
-  background-color: #ccc;
-  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: 300ms ease-in-out;
-}
-
-.input:focus {
-  background-color: white;
-  transform: scale(1.05);
-  box-shadow: 13px 13px 100px #969696,
-    -13px -13px 100px #ffffff;
-}
-
-button[type='submit'] {
-  background-color: green;
-  position: absolute;
-  right: 0;
-  bottom: -70px;
 }

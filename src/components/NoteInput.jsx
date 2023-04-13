@@ -31,15 +31,13 @@ export default class NoteInput extends Component {
   onSubmitEventHandler = (event) => {
     event.preventDefault();
     this.props.addNote(this.state);
-    // event.target.reset();
   }
-
 
   render() {
     return (
       <form onSubmit={this.onSubmitEventHandler} >
-        <input type="text" placeholder='title' value={this.state.title} onChange={this.onTitleChangeHandler} autoComplete='off' className='input' />
-        <textarea placeholder='body' value={this.state.body} onChange={this.onBodyChangeHandler} rows={12} className='input' />
+        <input type="text" placeholder='Title...' value={this.state.title} onChange={this.onTitleChangeHandler} autoComplete='off' className='input' />
+        <textarea placeholder='Note...' value={this.state.body} onChange={this.onBodyChangeHandler} rows={5} className='input' />
         <button type='submit'>Add Note</button>
       </form>
     )
