@@ -22,12 +22,14 @@ const NoteItem = ({ title, body, createdAt, id, archived, onDelete, onToggleArch
   )
 }
 
-NoteItem.propType = {
-  id: PropTypes.number.isRequired,
+NoteItem.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
-  archived: PropTypes.bool.isRequired
+  archived: PropTypes.bool.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onToggleArchive: PropTypes.func.isRequired,
 }
 
 export default NoteItem

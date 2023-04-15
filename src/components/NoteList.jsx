@@ -1,6 +1,6 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import NoteItem from './NoteItem'
+import PropTypes from 'prop-types'
 
 const NoteList = ({ notes, onDelete, onToggleArchive }) => {
   return (
@@ -18,9 +18,10 @@ const NoteList = ({ notes, onDelete, onToggleArchive }) => {
 }
 
 
-// NoteList.propTypes = {
-//   notes: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   onDelete: PropTypes.func.isRequired
-// }
+NoteList.propTypes = {
+  notes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onToggleArchive: PropTypes.func.isRequired
+}
 
 export default NoteList

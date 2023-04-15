@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const ArchiveButton = ({ archived, id, onToggleArchive }) => {
     return (
@@ -12,6 +13,12 @@ const ArchiveButton = ({ archived, id, onToggleArchive }) => {
             }
         </>
     )
+}
+
+ArchiveButton.propTypes = {
+    archived: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
+    onToggleArchive: PropTypes.func.isRequired
 }
 
 export default ArchiveButton
