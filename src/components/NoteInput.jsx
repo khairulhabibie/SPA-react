@@ -36,10 +36,10 @@ export default class NoteInput extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmitEventHandler} >
-        <h2>TAMBAHKAN CATATAN BARU !</h2>
+        <h2>Tambah catatan baru !</h2>
         <input type="text" placeholder='Judul Catatan...' value={this.state.title} onChange={this.onTitleChangeHandler} autoComplete='off' className='title' />
         <textarea placeholder='Isi Catatan' value={this.state.body} onChange={this.onBodyChangeHandler} rows={13} className='body' />
-        <button type='submit'>Tambahkan Catatan</button>
+        <button type='submit'>Simpan Catatan</button>
       </form>
     )
   }

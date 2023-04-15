@@ -61,6 +61,7 @@ class ArchivePage extends Component {
 
     return (
       <section>
+        <h3>Cari Catatan Arsip</h3>
         <SearchBar keyword={this.state.keyword} keywordChange={this.onKeywordChangeHandler} />
         <NoteList notes={notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleArchiveNoteHandler} />
       </section>
