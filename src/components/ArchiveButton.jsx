@@ -5,9 +5,9 @@ const ArchiveButton = ({ archived, id, onToggleArchive }) => {
         <>
             {
                 archived ? <button className='btn-active' onClick={() => onToggleArchive(id)}>
-                    Active
+                    Aktifkan
                 </button> : <button className='btn-archive' onClick={() => onToggleArchive(id)}>
-                    Archive
+                    Arsipkan
                 </button>
             }
         </>

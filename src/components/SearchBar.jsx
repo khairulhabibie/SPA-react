@@ -1,11 +1,14 @@
 import React from 'react'
 
-const SearchBar = ({ keyword, keywordChange }) => {
+const SearchBar = ({ title, keywordChange }) => {
   return (
-    <input className='search-bar' type='text' placeholder='Search note by title'
-      value={keyword}
-      onChange={(event) => keywordChange(event.target.value)}
-    />
+    <>
+      <h3>Cari Catatan</h3>
+      <input className='search-bar' type='text' placeholder='Cari berdasarkan Judul...'
+        value={title}
+        onChange={(event) => keywordChange(event.target.value)}
+      />
+    </>
   )
 }
 

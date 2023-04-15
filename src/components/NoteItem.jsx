@@ -7,7 +7,7 @@ import ArchiveButton from './ArchiveButton'
 const NoteItem = ({ title, body, createdAt, id, archived, onDelete, onToggleArchive }) => {
   return (
     <div className='note-item'>
-      <div className='note-item-title'>
+      <div >
         <h4>
           <Link to={`/note/${id}`}>{title}</Link>
         </h4>

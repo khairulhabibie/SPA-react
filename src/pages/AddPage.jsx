@@ -13,7 +13,6 @@ const AddPage = () => {
 
   return (
     <section>
-      <h2>ADD NEW NOTE !</h2>
       <NoteInput addNote={onAddNoteHandler} />
     </section>
   )

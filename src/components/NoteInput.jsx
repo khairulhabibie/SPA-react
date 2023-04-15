@@ -36,9 +36,10 @@ export default class NoteInput extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmitEventHandler} >
-        <input type="text" placeholder='Title...' value={this.state.title} onChange={this.onTitleChangeHandler} autoComplete='off' className='input' />
-        <textarea placeholder='Note...' value={this.state.body} onChange={this.onBodyChangeHandler} rows={5} className='input' />
-        <button type='submit'>Add Note</button>
+        <h2>TAMBAHKAN CATATAN BARU !</h2>
+        <input type="text" placeholder='Judul Catatan...' value={this.state.title} onChange={this.onTitleChangeHandler} autoComplete='off' className='title' />
+        <textarea placeholder='Isi Catatan' value={this.state.body} onChange={this.onBodyChangeHandler} rows={13} className='body' />
+        <button type='submit'>Tambahkan Catatan</button>
       </form>
     )
   }
