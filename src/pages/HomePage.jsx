@@ -63,7 +63,7 @@ class HomePage extends Component {
 
     return (
       <section>
-        <SearchBar title={this.state.keyword} keywordChange={this.onKeywordChangeHandler} />
+        <SearchBar keyword={this.state.keyword} keywordChange={this.onKeywordChangeHandler} />
         <br />
         <NoteList notes={notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleArchiveNoteHandler} />
       </section>
