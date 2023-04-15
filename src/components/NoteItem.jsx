@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import DeleteButton from './DeleteButton'
 import ArchiveButton from './ArchiveButton'
+import { showFormattedDate } from '../utils'
 
 const NoteItem = ({ title, body, createdAt, id, archived, onDelete, onToggleArchive }) => {
   return (
@@ -11,7 +12,7 @@ const NoteItem = ({ title, body, createdAt, id, archived, onDelete, onToggleArch
         <h4>
           <Link to={`/note/${id}`}>{title}</Link>
         </h4>
-        <p className='note-item-date'>{createdAt}</p>
+        <p className='note-item-date'>{showFormattedDate(createdAt)}</p>
       </div>
       <div className='note-item-body'><p>{body}</p></div>
       <div className='note-item-button'>

@@ -2,13 +2,14 @@ import React from 'react'
 import DeleteButton from './DeleteButton'
 import ArchiveButton from './ArchiveButton'
 import PropTypes from 'prop-types'
+import { showFormattedDate } from '../utils'
 
 const NoteDetail = ({ id, title, body, createdAt, archived, onDelete, onToggleArchive, }) => {
     return (
         <>
             <section className='note-detail'>
                 <h1>{title}</h1>
-                <p className='date'>{createdAt}</p>
+                <p className='date'>{showFormattedDate(createdAt)}</p>
                 <p>{body}</p>
             </section>
 

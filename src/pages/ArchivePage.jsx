@@ -65,7 +65,9 @@ class ArchivePage extends Component {
       <section>
         <h3>Cari Catatan Arsip</h3>
         <SearchBar keyword={this.state.keyword} keywordChange={this.onKeywordChangeHandler} />
-        <NoteList notes={notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleArchiveNoteHandler} />
+        {
+          notes.length !== 0 ? <NoteList notes={notes} onDelete={this.onDeleteNoteHandler} onToggleArchive={this.onToggleArchiveNoteHandler} /> : <p>Tidak ada catatan arsip !</p>
+        }
       </section>
     )
   }
