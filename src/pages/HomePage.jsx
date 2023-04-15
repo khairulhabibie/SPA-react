@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 import NoteList from '../components/NoteList'
 import { getActiveNotes, deleteNote, archiveNote } from '../utils/local-data'
 import SearchBar from '../components/SearchBar'
+import PropTypes from 'prop-types'
+
 
 const HomePageWrapper = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -70,6 +72,11 @@ class HomePage extends Component {
       </section>
     )
   }
+}
+
+HomePage.propTypes = {
+  defaultKeyword: PropTypes.string,
+  keywordChange: PropTypes.func,
 }
 
 export default HomePageWrapper

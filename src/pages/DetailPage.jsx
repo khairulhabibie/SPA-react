@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { deleteNote, getNote, archiveNote, unarchiveNote, } from '../utils/local-data'
 import NoteDetail from '../components/NoteDetail';
+import PropTypes from 'prop-types'
 
 const DetailPageWapper = () => {
     const { id } = useParams();
@@ -42,6 +43,12 @@ class DetailPage extends Component {
             <NoteDetail {...this.state.note} onDelete={this.props.onDelete} onToggleArchive={this.onToggleArchiveHandler} />
         )
     }
+}
+
+DetailPage.propTypes = {
+    id: PropTypes.string.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onActiveNote: PropTypes.func.isRequired
 }
 
 

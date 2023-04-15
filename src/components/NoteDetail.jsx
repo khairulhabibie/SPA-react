@@ -22,7 +22,7 @@ const NoteDetail = ({ id, title, body, createdAt, archived, onDelete, onToggleAr
 }
 
 NoteDetail.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
