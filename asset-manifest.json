@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/project/note-app/static/css/main.6ef09ef3.css",
+    "main.js": "/project/note-app/static/js/main.8637153a.js",
+    "index.html": "/project/note-app/index.html",
+    "main.6ef09ef3.css.map": "/project/note-app/static/css/main.6ef09ef3.css.map",
+    "main.8637153a.js.map": "/project/note-app/static/js/main.8637153a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ef09ef3.css",
+    "static/js/main.8637153a.js"
+  ]
+}
