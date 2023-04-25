@@ -10,12 +10,11 @@ import NotFound from './pages/NotFoundPage';
 
 function App() {
   return (
-    <div className="app-container">
+    <div>
       <header>
-        <h2>Aplikasi Catatan</h2>
+        <h2 className='text-3xl'>Aplikasi Catatan</h2>
         <Navigation />
       </header>
-      <hr />
       <main>
         <Routes>
           <Route path="/" exact element={<HomePageWrapper />} />
